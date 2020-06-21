@@ -15,9 +15,9 @@ A comunicação entre os containers são feitas através da rede interna do Dock
 Informações:
 As credenciais de acesso ao banco de dados (senha de root e usuário e senha de usuário)  devem ser alteradas no arquivo docker-compose.yml, nas linhas:
 
-MYSQL_ROOT_PASSWORD: root
-MYSQL_USER: admin
-MYSQL_PASSWORD: admin
+- MYSQL_ROOT_PASSWORD: root
+- MYSQL_USER: admin
+- MYSQL_PASSWORD: admin
 
 Para utilização desta stack, efetuar o clone do projeto e seguir conforme passos abaixo:
 
