@@ -1,0 +1,51 @@
+version: "3.8"
+services:
+#Container web
+  web:
+    image: php:7.2-apache
+    environment:
+       - ALLOW_OVERRIDE=true
+    ports:
+       - "80:80"
+    links:
+       - database:database
+    volumes:
+       - ./app:/var/www/html/
+    networks:
+        - mynet
+
+#Container do banco de dados
+  database:
+    image: mariadb
+    restart: always
+    volumes:
+      - ./database:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+      MYSQL_DATABASE: opencart
+    ports:
+      - "3306:3306"
+    networks:
+        - mynet
+
+#Container PMA para gerenciamento do banco
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    links:
+      - database:database
+    ports:
+      - 81:80
+    environment:
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+      MYSQL_ROOT_PASSWORD: root
+      PMA_HOST: database
+    networks:
+        - mynet
+
+#Rede interna
+networks:
+  mynet:
+
