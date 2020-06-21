@@ -1,0 +1,40 @@
+{
+  "name": "opencartbrasil/opencartbrasil",
+  "description": "Projeto OpenCart Brasil",
+  "homepage": "https://www.opencartbrasil.com.br/",
+  "type": "project",
+  "license": "GPL-3.0-or-later",
+  "prefer-stable": true,
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.6.0",
+    "composer/installers": "~1.2",
+    "cardinity/cardinity-sdk-php": "^1.0",
+    "braintree/braintree_php": "3.2.0",
+    "leafo/scssphp": ">=0.7.5",
+    "divido/divido-php": ">=1.1.1",
+    "klarna/kco_rest": "^2.2",
+    "zoujingli/wechat-php-sdk": ">=1.3.10"
+  },
+  "authors": [
+    {
+      "name": "OpenCart Brasil",
+      "homepage": "https://github.com/opencartbrasil"
+    }
+  ],
+  "keywords": [
+    "opencartbrasil",
+    "opencart",
+    "ecommerce",
+    "framework",
+    "opensource"
+  ],
+  "support": {
+    "source": "https://github.com/opencartbrasil/opencartbrasil/releases",
+    "issues": "https://github.com/opencartbrasil/opencartbrasil/issues",
+    "forum": "https://forum.opencartbrasil.com.br/"
+  },
+  "config": {
+    "vendor-dir": "./system/storage/vendor/"
+  }
+}
